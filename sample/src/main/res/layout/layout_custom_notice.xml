@@ -9,9 +9,9 @@
     android:gravity="center_horizontal"
     android:padding="10dp"
     android:text="Go to second"
-    android:textColor="@color/colorPrimary"
-    app:normalBackgroundColor="#ffffff"
-    app:pressedBackgroundColor="#FF9499B1"
+    android:textColor="#ffffff"
+    app:normalBackgroundColor="@color/colorAccent"
+    app:pressedBackgroundColor="@color/colorPrimary"
     app:radius="20dp" />
 
 

@@ -32,8 +32,9 @@ public class App extends Application {
 
         StateConfiguration.Builder builder = new StateConfiguration.Builder();
         builder.setCommonEmptyLayout(R.layout.layout_empty)
-               .setCommonErrorLayout(R.layout.layout_error)
-               .setCommonLoadingLayout(R.layout.layout_loading).setDrawableList(list);
+                .setCommonErrorLayout(R.layout.layout_error)
+                .setCommonLoadingLayout(R.layout.layout_loading)
+                .setDrawableList(list);
         StateLayout.setConfiguration(builder);
     }
 }
