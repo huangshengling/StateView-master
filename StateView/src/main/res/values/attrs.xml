@@ -1,0 +1,47 @@
+<resources>
+    <declare-styleable name="StateLayout">
+
+        <attr name="animDuration" format="integer"/>
+        <attr name="animEnable" format="boolean"/>
+        <attr name="layout_empty" format="reference"/>
+        <attr name="layout_loading" format="reference"/>
+        <attr name="layout_error" format="reference"/>
+        <attr name="layout_network_error" format="reference"/>
+
+        <attr name="state" format="enum">
+            <enum name="normal"        value="0"/>
+            <enum name="empty"         value="1"/>
+            <enum name="loading"       value="2"/>
+            <enum name="error"         value="3"/>
+            <enum name="network_error" value="4"/>
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="StateButton">
+
+        <attr name="normalTextColor" format="color|reference"/>
+        <attr name="pressedTextColor" format="color|reference"/>
+        <attr name="unableTextColor" format="color|reference"/>
+
+        <attr name="strokeDashWidth" format="dimension|reference"/>
+        <attr name="strokeDashGap" format="dimension|reference"/>
+        <attr name="normalStrokeWidth" format="dimension|reference"/>
+        <attr name="pressedStrokeWidth" format="dimension|reference"/>
+        <attr name="unableStrokeWidth" format="dimension|reference"/>
+        <attr name="normalStrokeColor" format="color|reference"/>
+        <attr name="pressedStrokeColor" format="color|reference"/>
+        <attr name="unableStrokeColor" format="color|reference"/>
+
+        <attr name="normalBackgroundColor" format="color|reference"/>
+        <attr name="pressedBackgroundColor" format="color|reference"/>
+        <attr name="unableBackgroundColor" format="color|reference"/>
+
+        <attr name="radius" format="dimension|reference"/>
+        <attr name="round" format="boolean|reference"/>
+        <attr name="centerImageText" format="boolean|reference" />
+        <attr name="animationDuration" format="integer|reference"/>
+
+    </declare-styleable>
+</resources>

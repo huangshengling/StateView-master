@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_content"
+        android:title="show content layout"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_empty"
+        android:title="show empty layout"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_loading"
+        android:title="show loading layout"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_error"
+        android:title="show error layout"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_network_error"
+        android:title="show network Error layout"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_custom"
+        android:title="show custom layout"
+        app:showAsAction="never"/>
+</menu>
