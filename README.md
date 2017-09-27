@@ -1,6 +1,6 @@
 A customize state layout for Android.
 
-![](https://github.com/huangshengling/StateView-master/blob/master/art/screenshot.gif?raw=true)
+![](https://github.com/huangshengling/StateView-master/blob/master/art/screen_shot.gif?raw=true)
 
 ### Usage
 
