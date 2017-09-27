@@ -1,14 +1,12 @@
 A customize state layout for Android.
 
+![](https://github.com/huangshengling/StateView-master/blob/master/art/screenshot.gif?raw=true)
+
 ### Usage
 
 ##### Edit your layout XML:
 <cn.holy.stateview.StateLayout
         android:id="@+id/state_layout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:state="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         state:layout_network_error="@layout/layout_custom_network_error"
         state:animEnable="true"
         state:animDuration="300">
@@ -45,10 +43,8 @@ public class App extends Application {
                 StateLayout.setConfiguration(builder);
     }
 }
-```
 
 ##### How to change state?
-```java
 
 mStateLayout.setState(StateLayout.State.CONTENT);
 
@@ -78,20 +74,17 @@ mStateLayout.setOnStateViewCreatedListener(new OnStateViewCreatedListener() {
     }
 });
 
-```
-
 ##### How to add customize state view?
-```java
+
 View customStateView = LayoutInflater.from(this).inflate(R.layout.layout_custom_notice, mStateLayout, false);
 mStateLayout.putCustomStateView(KEY_CUSTOM_STATE, customStateView);
-```
+
 ##### Show customize state view.
-```java
+
 mStateLayout.setCustomState(KEY_CUSTOM_STATE);
-```
+
 
 ##### How to customise transition animation?
-```java
 mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
     @Override
     public ObjectAnimator loadAnimator(View targetView) {
@@ -101,21 +94,20 @@ mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
         return customAnimator;
     }
 });
-```
 
 ##### 如何添加自定义的状态视图?
-```java
+
         View viewCustomNotice = LayoutInflater.from(this).inflate(R.layout.layout_custom_notice, mStateLayout, false);
         mStateLayout.putCustomStateView(KEY_CUSTOM_NOTICE, viewCustomNotice);
 
-```
 ##### 切换至自定义状态
-```java
+
 mStateLayout.setCustomState(KEY_CUSTOM_STATE);
-```
+
+
 
 ##### 如何切换自定义状态时的过渡动画?
-```java
+
 mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
     @Override
     public ObjectAnimator loadAnimator(View targetView) {
@@ -125,4 +117,3 @@ mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
         return customAnimator;
     }
 });
-```
