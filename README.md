@@ -21,7 +21,9 @@ A customize state layout for Android.
     </cn.holy.stateview.StateLayout>
 
 ##### Common Configuration
+
 public class App extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -57,6 +59,7 @@ mStateLayout.setState(StateLayout.State.ERROR);
 mStateLayout.setState(StateLayout.State.NETWORK_ERROR);
 
 mStateLayout.setOnStateViewCreatedListener(new OnStateViewCreatedListener() {
+
     @Override
     public void onViewCreated(View view, int state) {
         switch (state) {
@@ -85,7 +88,10 @@ mStateLayout.setCustomState(KEY_CUSTOM_STATE);
 
 
 ##### How to customise transition animation?
-mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
+mStateLayout.setTransitionAnimator(
+
+new TransitionAnimatorLoader() {
+
     @Override
     public ObjectAnimator loadAnimator(View targetView) {
         ObjectAnimator customAnimator = ObjectAnimator.ofFloat(targetView, "alpha", 0.0f, 1.0f)
@@ -108,7 +114,10 @@ mStateLayout.setCustomState(KEY_CUSTOM_STATE);
 
 ##### 如何切换自定义状态时的过渡动画?
 
-mStateLayout.setTransitionAnimator(new TransitionAnimatorLoader() {
+mStateLayout.setTransitionAnimator(
+
+new TransitionAnimatorLoader() {
+
     @Override
     public ObjectAnimator loadAnimator(View targetView) {
         ObjectAnimator customAnimator = ObjectAnimator.ofFloat(targetView, "alpha", 0.0f, 1.0f)
