@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setupViews() {
-        mStateLayout = (StateLayout) findViewById(R.id.multi_state_layout);
+        mStateLayout = (StateLayout) findViewById(R.id.state_layout);
         findViewById(R.id.tv_content).setOnClickListener(this);
 
         setupToolbar();

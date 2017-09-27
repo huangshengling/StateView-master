@@ -19,7 +19,7 @@ import cn.holy.stateview.StateLayout;
  */
 public class SecondFragment extends Fragment {
 
-    private StateLayout mMultiStateLayout;
+    private StateLayout mStateLayout;
 
     public static SecondFragment newInstance() {
         return new SecondFragment();
@@ -34,23 +34,23 @@ public class SecondFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mMultiStateLayout = (StateLayout) view.findViewById(R.id.multi_state_layout);
-        mMultiStateLayout.setState(StateLayout.State.LOADING);
+        mStateLayout = (StateLayout) view.findViewById(R.id.state_layout);
+        mStateLayout.setState(StateLayout.State.LOADING);
 
-        mMultiStateLayout.postDelayed(new Runnable() {
+        mStateLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mMultiStateLayout.setState(StateLayout.State.NETWORK_ERROR);
+                mStateLayout.setState(StateLayout.State.NETWORK_ERROR);
             }
         }, 2000);
 
-        View networkErrorView = mMultiStateLayout.getNetworkErrorView();
+        View networkErrorView = mStateLayout.getNetworkErrorView();
         if (null != networkErrorView) {
             ((TextView) networkErrorView.findViewById(R.id.tv_msg)).setText(R.string.mock_text);
             networkErrorView.findViewById(R.id.btn_reload).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mMultiStateLayout.setState(StateLayout.State.CONTENT);
+                    mStateLayout.setState(StateLayout.State.CONTENT);
                 }
             });
         }
